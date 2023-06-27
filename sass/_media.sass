@@ -1,0 +1,44 @@
+@media screen and ( min-width: 992px)
+  .header
+    &-menu-list__link:hover
+      color: $orange
+    &-social__link:hover
+      color: $orange
+  .button:hover
+    background-color: transparent
+    color: $keko
+    border: 1px solid $keko
+@media  ( max-width: 1200px  )
+  .container
+    max-width: 1120px
+  .header
+    &-logo
+      height: 90px
+    &-menu
+      gap: 30px
+    &-menu-list__link
+      font-size: 18px
+  .hero
+    padding-top: 100px
+    &-title
+      font-size: 65px
+    &-right
+      width: 700px
+      bottom: -30px
+      &-wrapper
+        margin-inline-end: 0
+        margin-inline: auto
+        padding: 0 15px 0 15px
+    &-advantages
+      margin-top: 30px
+@media  ( max-width: 992px  )
+  .container
+    max-width: 760px
+
+@media  ( max-width: 768px  )
+  .container
+    max-width: 576px
+
+@media  ( max-width: 576px  )
+  .container
+    max-width: 92%
