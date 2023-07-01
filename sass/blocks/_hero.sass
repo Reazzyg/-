@@ -1,21 +1,27 @@
-
 .hero
-  padding-top: 150px
+  padding-top: 100px
   padding-bottom: 97px
+  height: calc(100vh - 200px)
   background-color: $bgc
   position: relative
+  &-container
+    height: 100%
   &-left
+    height: 100%
     position: relative
     display: flex
     flex-direction: column
-    max-width: 1120px
+    justify-content: space-evenly
+    max-width: 1040px
     z-index: 1
   &-title
     font-family: $title
     font-size: 70px
     font-weight: 700
     color: $white
-    margin-bottom: 30px
+    line-height: 88%
+    letter-spacing: -2.1px
+    margin-bottom: 5px
     &__accent
       font-family: $title
       font-size: 72px
@@ -23,21 +29,23 @@
       color: $orange
   &-subtitle
     max-width: 427px
-    margin-bottom: 30px
+    margin-bottom: 5px
   &-advantages
     width: fit-content
     display: flex
     flex-direction: column
-    margin-top: 95px
+    margin-top: 5px
     &-item
       display: flex
       align-items: center
       gap: 15px
       position: relative
       margin-bottom: 15px
+      &:nth-last-child(1)
+        margin-bottom: 0
   &-right
     position: absolute
-    top: 0
+    top: 55px
     right: 0
     bottom: -60px
     display: flex
@@ -45,13 +53,16 @@
     align-items: flex-end
     padding-bottom: 30px
     width: 1100px
-    background-image: url('/img/hero-bg.png')
+    max-width: 70%
+    background-image: url('../img/hero-bg.jpg')
     background-repeat: no-repeat
     background-size: cover
+    background-position: bottom
     &-overlay
       position: absolute
       bottom: 0
       width: 100%
+      height: 150px
       opacity: 0.6000000238418579
       background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.41) 34.90%, #000 100%)
       &-big
@@ -61,6 +72,16 @@
         height: 330px
         opacity: 0.6000000238418579
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)
+      &-circle
+        position: absolute
+        top: 0
+        width: 100%
+        height: 483px
+        left: -50%
+        border-radius: 1367px
+        opacity: 0.4000000059604645
+        background: #1E1D1D
+        filter: blur(47.92010498046875px)
     &-wrapper
       margin-inline-end: 130px
       display: flex
@@ -79,3 +100,12 @@
         width: 3px
         background-color: $orange
         transform: translateY(-50%)
+  &-advantages
+    &-mobile
+      display: none
+      padding-top: 60px
+      &-container
+        display: flex
+        justify-content: space-between
+      p
+        color: $text-color

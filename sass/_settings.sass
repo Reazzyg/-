@@ -9,20 +9,45 @@ ul
 p
   font-size: 18px
   color: #fff
+  line-height: 130%
 h1,h2,h3,h4,h5,h6,p,ul
   margin: 0
   padding: 0
+h2
+  font-family: $title
+  font-size: 47px
+  font-weight: 700
+  line-height: 125%
+  letter-spacing: -0.94px
+  margin-bottom: 30px
+// section, header, footer
+//   padding: 0 15px 0 15px
+
 .container
   max-width: 1448px
+  width: 95%
   margin: auto
-  padding: 0 15px 0 15px
 .button
-  max-width: 210px
+  max-width: fit-content
   padding: 13px 30px
   border-radius: 15px
+  font-size: 18px
   background: $keko
   color: $white
   border: 1px solid $keko
   outline: none
   transition: all .3s
   cursor: pointer
+  &-outline
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    color: $keko
+    max-width: 40%
+    width: 40%
+.load-more
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
