@@ -17,58 +17,81 @@ $('.header-menu-mobile-list-close').on('click', function(){
     return false;
   });
 
- // Получаем все элементы фильтра
+
   const filterItems = document.querySelectorAll('.filter__item');
+let activeFilter = 'doma';
 
-  // Получаем все элементы портфолио
+function applyFilter(filter) {
   const portfolioRows = document.querySelectorAll('.portfolio-row');
+  const portfolioTypes = document.querySelectorAll(`.portfolio-type[data="${filter}"]`);
 
-  // Устанавливаем активный раздел по умолчанию
-  let activeFilter = 'doma';
-
-  // Функция для обработки клика по элементу фильтра
-  function handleFilterClick(event) {
-    // Удаляем класс активного элемента у всех элементов фильтра
-    filterItems.forEach(item => item.classList.remove('filter__item-active'));
-
-    // Добавляем класс активного элемента к текущему элементу
-    event.target.classList.add('filter__item-active');
-
-    // Получаем значение атрибута data-target текущего элемента
-    const target = event.target.getAttribute('data-target');
-
-    // Показываем только выбранный раздел портфолио
-    portfolioRows.forEach(row => {
-      if (row.getAttribute('data') === target) {
-        row.style.display = 'flex';
-      } else {
-        row.style.display = 'none';
-      }
-    });
-
-    // Обновляем значение активного раздела
-    activeFilter = target;
-  }
-
-  // Добавляем обработчик клика к каждому элементу фильтра
-  filterItems.forEach(item => item.addEventListener('click', handleFilterClick));
-
-  // Устанавливаем активный раздел по умолчанию
-  filterItems.forEach(item => {
-    if (item.getAttribute('data-target') === activeFilter) {
-      item.classList.add('filter__item-active');
-    }
-  });
-
-  // Показываем только выбранный раздел портфолио
-  portfolioRows.forEach(row => {
-    if (row.getAttribute('data') === activeFilter) {
+  portfolioRows.forEach((row, index) => {
+    if (index === 0 && row.parentElement.getAttribute('data') === filter) {
       row.style.display = 'flex';
     } else {
       row.style.display = 'none';
     }
   });
-  
+
+  portfolioTypes.forEach(row => {
+    if (row.getAttribute('data') === filter) {
+      row.style.display = 'flex';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+
+  activeFilter = filter;
+
+  const loadMoreBtn = document.querySelector('.load-more');
+  loadMoreBtn.style.display = 'flex';
+}
+
+function showFirstRow() {
+  const portfolioTypes = document.querySelectorAll('.portfolio-type');
+
+  portfolioTypes.forEach(portfolioType => {
+    const filter = portfolioType.getAttribute('data');
+    const portfolioRows = portfolioType.querySelectorAll('.portfolio-row');
+    const firstRow = portfolioRows[0];
+
+    portfolioRows.forEach(row => {
+      if (row === firstRow && filter === activeFilter) {
+        row.style.display = 'flex';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+}
+
+filterItems.forEach(item => item.addEventListener('click', function(event) {
+  const target = event.target.getAttribute('data-target');
+  filterItems.forEach(item => item.classList.remove('filter__item-active'));
+  event.target.classList.add('filter__item-active');
+  applyFilter(target);
+
+  showFirstRow(); // Показать первый ряд после смены вкладки фильтра
+}));
+
+applyFilter(activeFilter);
+showFirstRow(); // Показать первый ряд при загрузке страницы
+
+const loadMoreBtn = document.querySelector('.load-more');
+if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', function() {
+    const hiddenRows = document.querySelectorAll('.portfolio-row:not([style="display: flex;"])');
+    const rowsToLoad = Array.from(hiddenRows).filter(row => row.parentElement.getAttribute('data') === activeFilter).slice(0, 1);
+
+    rowsToLoad.forEach(row => {
+      row.style.display = 'flex';
+    });
+
+    const isLastRow = hiddenRows.length <= 1 || rowsToLoad.length === 0;
+    this.style.display = isLastRow ? 'none' : 'flex';
+  });
+}
+
 
   // const showMenu = (toggleId, navId) => {
   //   const toggle = document.getElementById(toggleId),

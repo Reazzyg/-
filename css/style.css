@@ -87,6 +87,10 @@ h2 {
   width: 100%;
 }
 
+.hidden {
+  display: none;
+}
+
 .header {
   padding-top: 20px;
   background-color: #323030;
@@ -396,6 +400,10 @@ h2 {
 .portfolio-title {
   color: #fff;
 }
+.portfolio-type {
+  display: flex;
+  flex-direction: column;
+}
 .portfolio-row {
   display: flex;
   justify-content: space-between;
@@ -405,6 +413,7 @@ h2 {
 .portfolio-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 95%;
   margin: auto;
 }
@@ -415,11 +424,11 @@ h2 {
 }
 .portfolio-little .portfolio-card {
   height: 240px;
-  width: 360px;
+  width: 100%;
 }
 .portfolio-card {
   height: 500px;
-  max-width: 660px;
+  width: 45%;
   overflow: hidden;
   position: relative;
   cursor: pointer;
