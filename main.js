@@ -1,11 +1,12 @@
 $(document).ready(function () {
 
-$('.header-burger').on('click', function(){
-  $('.header-menu-mobile').addClass('header-menu-mobile--active')
-})
-$('.header-menu-mobile-list-close').on('click', function(){
-  $('.header-menu-mobile--active').removeClass('header-menu-mobile--active')
-})
+document.querySelector('.header-burger').addEventListener('click', function() {
+document.querySelector('.header-menu-mobile').classList.add('header-menu-mobile--active');
+});
+
+document.querySelector('.header-menu-mobile-list-close').addEventListener('click', function() {
+document.querySelector('.header-menu-mobile--active').classList.remove('header-menu-mobile--active');
+});
 
 
   $('a[href^="#"').on('click', function () {

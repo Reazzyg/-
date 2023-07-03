@@ -399,6 +399,7 @@ h2 {
 }
 .portfolio-title {
   color: #fff;
+  margin-bottom: 0;
 }
 .portfolio-type {
   display: flex;
@@ -416,6 +417,7 @@ h2 {
   align-items: center;
   max-width: 95%;
   margin: auto;
+  margin-bottom: 20px;
 }
 .portfolio-little {
   display: flex;
@@ -497,6 +499,113 @@ h2 {
   background-color: #E79C2B;
 }
 
+.why {
+  padding: 180px 0 180px 0;
+  position: relative;
+  background: linear-gradient(0deg, rgba(50, 48, 48, 0.5) 0%, rgba(50, 48, 48, 0.5) 100%), url("../img/why-us.jpg"), lightgray 50%/cover no-repeat;
+  background-attachment: fixed;
+  z-index: 2;
+}
+.why-container {
+  display: flex;
+  flex-direction: column;
+}
+.why-title {
+  color: #fff;
+  margin-bottom: 60px;
+}
+.why-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.why-card {
+  padding: 30px;
+  max-width: 467px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.why-card__title {
+  color: #DD8F1B;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.children {
+  padding: 180px 0 90px 0;
+}
+.children-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+}
+.children-top {
+  max-width: 95%;
+  margin: auto;
+}
+.children-title {
+  color: #434242;
+  margin-bottom: 30px;
+}
+.children-subtitle {
+  color: #434242;
+  margin-bottom: 60px;
+}
+.children-wrapper {
+  padding-right: 141px;
+  width: 95%;
+  height: 639px;
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../img/back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.children-wrapper-mobile {
+  display: none;
+}
+.children__img {
+  height: 563px;
+  max-width: 100%;
+}
+.children-list {
+  counter-reset: children;
+}
+.children-list__item {
+  position: relative;
+  padding-left: 48px;
+  color: #fff;
+  font-size: 33px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  counter-increment: children;
+}
+.children-list__item p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.children-list__item::before {
+  content: counter(children) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #E79C2B;
+  font-family: "Raleway", sans-serif;
+  font-size: 33px;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 992px) {
   .header-menu-list__link:hover {
     color: #DD8F1B;
@@ -511,6 +620,11 @@ h2 {
   }
   .portfolio-card:hover .portfolio-card-description {
     display: flex;
+  }
+}
+@media (max-width: 1520px) {
+  .why-card {
+    max-width: 362px;
   }
 }
 @media (max-width: 1200px) {
@@ -558,6 +672,34 @@ h2 {
   .about__img {
     width: 40%;
   }
+  .portfolio-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .why-card {
+    max-width: unset;
+    width: 45%;
+  }
+  .why-card__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .children-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .children__img {
+    height: 400px;
+  }
+  .children-wrapper {
+    padding-right: 50px;
+  }
+  .children-list__item {
+    font-size: 26px;
+  }
+  .children-list__item p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 992px) {
   .container {
@@ -587,10 +729,39 @@ h2 {
   .hero-title__accent {
     font-size: 45px;
   }
+  .about-container {
+    gap: 35px;
+  }
+  .about__img {
+    width: 45%;
+  }
+  .filter__item {
+    font-size: 18px;
+  }
+  .portfolio-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .children-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .children__img {
+    height: 300px;
+  }
+  .children-wrapper {
+    padding-right: 10px;
+  }
+  .children-list__item {
+    font-size: 23px;
+  }
+  .children-list__item p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 576px;
+    max-width: 728px;
   }
   .hero-right-wrapper {
     display: none;
@@ -607,6 +778,53 @@ h2 {
   .about {
     padding: 60px 0 60px 0;
   }
+  .portfolio {
+    padding: 90px 0 90px 0;
+  }
+  .portfolio-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .portfolio-top {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .portfolio-row .portfolio-card:nth-last-child(1) {
+    display: none;
+  }
+  .portfolio-little .portfolio-card:nth-last-child(1) {
+    display: flex;
+  }
+  .portfolio-little .portfolio-card {
+    width: 250px;
+    height: 160px;
+  }
+  .portfolio-card {
+    width: 62%;
+    height: 333px;
+  }
+  .why {
+    padding: 60px 0 60px 0;
+  }
+  .why-card__title {
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+  .children-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .children__img {
+    height: 250px;
+  }
+  .children-list__item {
+    padding-left: 30px;
+    font-size: 20px;
+  }
+  .children-list__item::before {
+    line-height: 25px;
+    font-size: 26px;
+  }
 }
 @media (max-width: 576px) {
   .container {
@@ -615,8 +833,15 @@ h2 {
   .button {
     font-size: 14px;
   }
+  .button-outline {
+    max-width: unset;
+    width: auto;
+  }
   p {
     font-size: 14px;
+  }
+  h2 {
+    font-size: 24px;
   }
   .header-social__icon {
     display: none;
@@ -695,5 +920,54 @@ h2 {
   }
   .about-wrapper {
     padding: 0 20px 0 20px;
+  }
+  .filter__item {
+    font-size: 16px;
+  }
+  .portfolio {
+    padding: 60px 0 60px 0;
+  }
+  .portfolio-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  .portfolio-row .portfolio-card:nth-last-child(1) {
+    display: none;
+  }
+  .portfolio-little .portfolio-card:nth-last-child(1) {
+    display: flex;
+  }
+  .portfolio-little .portfolio-card {
+    width: 122px;
+    height: 70px;
+  }
+  .portfolio-card {
+    width: 67%;
+    height: 152px;
+  }
+  .why-wrapper {
+    gap: 0;
+  }
+  .why-card {
+    width: 100%;
+  }
+  .children-container {
+    max-width: 100%;
+  }
+  .children-wrapper {
+    display: none;
+  }
+  .children-wrapper-mobile {
+    padding: 60px 5px 0 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    background-image: url("../img/back-mobile.png");
+    width: 100%;
+    height: unset;
+  }
+  .children__img {
+    max-width: 100%;
+    height: unset;
   }
 }

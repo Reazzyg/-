@@ -1,0 +1,58 @@
+.children
+  padding: 180px 0 90px 0
+  &-container
+    display: flex
+    flex-direction: column
+    max-width: 100%
+    width: 100%
+  &-top
+    max-width: 95%
+    margin: auto
+  &-title
+    color: $text-color
+    margin-bottom: 30px
+  &-subtitle
+    color: $text-color
+    margin-bottom: 60px
+  &-wrapper
+    padding-right: 141px
+    width: 95%
+    height: 639px
+    margin-inline-start: auto
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-image: url('../img/back.png')
+    background-repeat: no-repeat
+    background-size: cover
+    &-mobile
+      display: none
+  &__img
+    height: 563px
+    max-width: 100%
+  &-list
+    counter-reset: children
+    &__item
+      position: relative
+      padding-left: 48px
+      color: $white
+      font-size: 33px
+      font-family: $title
+      font-weight: 700
+      margin-bottom: 30px
+      counter-increment: children
+      & p
+        color: $white
+        font-size: 18px
+        font-weight: 500
+        margin-top: 5px
+      &::before
+        content: counter(children) '.'
+        position: absolute
+        left: 0
+        top: 0
+        // transform: translateY(-50%)
+        color: $keko
+        font-family: $title
+        font-size: 33px
+        font-weight: 700
