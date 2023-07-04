@@ -18,7 +18,7 @@ document.querySelector('.header-menu-mobile--active').classList.remove('header-m
     return false;
   });
 
-
+// ===============================================
   const filterItems = document.querySelectorAll('.filter__item');
 let activeFilter = 'doma';
 
@@ -92,6 +92,35 @@ if (loadMoreBtn) {
     this.style.display = isLastRow ? 'none' : 'flex';
   });
 }
+// ===============================================
+
+
+ // Получаем все элементы с атрибутом data-target
+  const tabs = document.querySelectorAll('[data-target]');
+  
+  // Добавляем обработчик клика на каждый элемент
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-target');
+      const images = document.querySelectorAll('.technology__img');
+      const tabItems = document.querySelectorAll('.technology-tabs__item');
+      
+      images.forEach(image => {
+        image.classList.remove('technology__img-active');
+      });
+      
+      tabItems.forEach(item => {
+        item.classList.remove('technology-tabs__item-active');
+      });
+      
+      const targetImage = document.querySelector(`[data="${target}"]`);
+      const targetTab = document.querySelector(`[data-target="${target}"]`);
+      
+      targetImage.classList.add('technology__img-active');
+      targetTab.classList.add('technology-tabs__item-active');
+    });
+  });
+
 
 
   // const showMenu = (toggleId, navId) => {

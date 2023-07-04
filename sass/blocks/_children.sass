@@ -17,14 +17,17 @@
   &-wrapper
     padding-right: 141px
     width: 95%
-    height: 639px
+    // height: 639px
+    border-top-left-radius: 320px 320px
+    border-bottom-left-radius: 320px 320px
     margin-inline-start: auto
     display: flex
     align-items: center
     justify-content: space-between
-    background-image: url('../img/back.png')
+    background-image: url('../img/wood.jpg')
     background-repeat: no-repeat
     background-size: cover
+    background-attachment: fixed
     &-mobile
       display: none
   &__img
@@ -32,6 +35,7 @@
     max-width: 100%
   &-list
     counter-reset: children
+    padding: 90px 0 90px 0
     &__item
       position: relative
       padding-left: 48px
@@ -41,6 +45,8 @@
       font-weight: 700
       margin-bottom: 30px
       counter-increment: children
+      &:nth-last-child(1)
+        margin-bottom: 0
       & p
         color: $white
         font-size: 18px

@@ -70,6 +70,9 @@
         font-size: 26px
         & p
           font-size: 16px
+  .technology
+    &__img
+      width: 250%
 @media  ( max-width: 992px  )
   .container
     max-width: 760px
@@ -112,10 +115,37 @@
     &-wrapper
       padding-right: 10px
     &-list
+      padding: 30px 0 30px 0
       &__item
         font-size: 23px
         & p
           font-size: 16px
+  .technology
+    &-container
+      max-width: 95%
+      justify-content: start
+    &-top
+      display: block
+      width: 95%
+      margin: auto
+      margin-bottom: 30px
+    &-wrapper
+      width: 100%
+    &-title, &-subtitle
+      display: none
+    &-title
+      &-mobile
+        display: block
+    &-subtitle
+      &-mobile
+        display: block
+    &__img
+      width: 70%
+      height: inherit
+    &-tabs
+      width: inherit
+      &__item
+        font-size: 16px
 @media  ( max-width: 768px  )
   .container
     max-width: 728px
@@ -169,6 +199,7 @@
         &::before
           line-height: 25px
           font-size: 26px
+
 @media  ( max-width: 576px  )
   .container
     max-width: 92%
@@ -272,15 +303,31 @@
     &-container
       max-width: 100%
     &-wrapper
-      display: none
-      &-mobile
-        padding: 60px 5px 0 20px
-        display: flex
-        flex-direction: column-reverse
-        justify-content: center
-        background-image: url('../img/back-mobile.png')
-        width: 100%
-        height: unset
+      padding: 60px 5px 0 20px
+      width: 100%
+      display: flex
+      flex-direction: column-reverse
+      justify-content: center
+      border-top-left-radius: unset
+      border-bottom-right-radius: 320px 320px
+      // &-mobile
+      //   display: flex
+      //   flex-direction: column-reverse
+      //   justify-content: center
+      //   background-image: url('../img/back-mobile.png')
+      //   width: 100%
+      //   height: unset
     &__img
       max-width: 100%
       height: unset
+  .technology
+    &-container
+      flex-direction: column-reverse
+      align-items: center
+    &-wrapper
+      padding: 0
+    &__img
+      margin-top: 35px
+      width: 100%
+      max-height: 350px
+      overflow: hidden
