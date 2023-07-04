@@ -18,7 +18,7 @@ document.querySelector('.header-menu-mobile--active').classList.remove('header-m
     return false;
   });
 
-// ===============================================
+// ====================Фильтр в разделе Наши работы===========================
   const filterItems = document.querySelectorAll('.filter__item');
 let activeFilter = 'doma';
 
@@ -92,7 +92,7 @@ if (loadMoreBtn) {
     this.style.display = isLastRow ? 'none' : 'flex';
   });
 }
-// ===============================================
+// ===============Табы в разделе видов рубки================================
 
 
  // Получаем все элементы с атрибутом data-target
@@ -120,6 +120,85 @@ if (loadMoreBtn) {
       targetTab.classList.add('technology-tabs__item-active');
     });
   });
+
+
+
+//===============Валидация и стилизация кнопки при вводе данных=====================================
+
+const nameInput = document.querySelector('.callback-form__input[type="text"]');
+const phoneInput = document.querySelector('.callback-form__input[type="tel"]');
+const emailInput = document.querySelector('.callback-form__input[type="email"]');
+const button = document.querySelector('.callback-form__button');
+
+const nameRegex = /^[\u0400-\u04FF]+$/; // Регулярное выражение для проверки имени на наличие только русских букв
+const phoneRegex = /^\d+$/; // Регулярное выражение для проверки телефона на наличие только цифр
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Регулярное выражение для проверки почты на корректный формат и состояние только из английских символов
+
+const nameError = document.querySelector('.callback-form__name-error');
+const phoneError = document.querySelector('.callback-form__phone-error');
+const emailError = document.querySelector('.callback-form__email-error');
+
+function validateName() {
+  if (!nameRegex.test(nameInput.value)) {
+    nameError.textContent = 'Введите верное имя';
+  } else {
+    nameError.textContent = '';
+  }
+  updateButtonColor();
+}
+
+function validatePhone() {
+  if (!phoneRegex.test(phoneInput.value)) {
+    phoneError.textContent = 'Введите верный телефон';
+  } else {
+    phoneError.textContent = '';
+  }
+  updateButtonColor();
+}
+
+function validateEmail() {
+  if (!emailRegex.test(emailInput.value)) {
+    emailError.textContent = 'Введите верную почту';
+  } else {
+    emailError.textContent = '';
+  }
+  updateButtonColor();
+}
+
+function updateButtonColor() {
+  const inputs = [nameInput, phoneInput, emailInput];
+  const isAnyInvalid = inputs.some((input) => !input.checkValidity());
+  const isAnyInputEmpty = inputs.some((input) => input.value === '');
+
+  if (isAnyInvalid || isAnyInputEmpty) {
+    button.classList.add('button-deactivated')
+  } else {
+    button.classList.remove('button-deactivated')
+  }
+}
+
+nameInput.addEventListener('input', validateName);
+phoneInput.addEventListener('input', validatePhone);
+emailInput.addEventListener('input', validateEmail);
+
+button.addEventListener('click', function(event) {
+  if (!nameInput.checkValidity()) {
+    event.preventDefault();
+    nameError.textContent = 'Введите верное имя';
+  }
+  
+  if (!phoneInput.checkValidity()) {
+    event.preventDefault();
+    phoneError.textContent = 'Введите верный телефон';
+  }
+  
+  if (!emailInput.checkValidity()) {
+    event.preventDefault();
+    emailError.textContent = 'Введите верную почту';
+  }
+});
+//====================================================
+
 
 
 

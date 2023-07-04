@@ -79,6 +79,10 @@ h2 {
   max-width: 40%;
   width: 40%;
 }
+.button-deactivated {
+  background-color: #9E9C9C;
+  border: 1px solid #9E9C9C;
+}
 
 .load-more {
   display: flex;
@@ -89,6 +93,23 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 100%;
+  color: #9E9C9C;
+  font-size: 12px;
+  margin-bottom: 20px;
+  padding: 0 10px 15px 5px;
+  border-bottom: 1px solid #9E9C9C;
+}
+.input:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.input:focus .callback-form__button {
+  background-color: #fff;
 }
 
 .header {
@@ -664,6 +685,116 @@ h2 {
 }
 .technology-tabs__item-active {
   color: #E79C2B;
+}
+
+.callback {
+  padding: 180px 0 180px 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/form-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.callback-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: -2;
+}
+.callback-circle {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: -50%;
+  transform: translateY(50%);
+  width: 1701px;
+  height: 372px;
+  border-radius: 1701px;
+  opacity: 0.6000000238;
+  background: #222;
+  filter: blur(150px);
+  z-index: -1;
+}
+.callback-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.callback-text {
+  display: flex;
+  flex-direction: column;
+}
+.callback-title {
+  color: #fff;
+}
+.callback-subtitle {
+  margin-bottom: 30px;
+}
+.callback-form {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  background-color: #fff;
+}
+.callback-form__title {
+  font-size: 33px;
+  font-family: "Raleway", sans-serif;
+  color: #434242;
+  text-align: center;
+}
+.callback-form__button {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 40px;
+}
+.callback-form__policy {
+  margin-top: 20px;
+  color: #9E9C9C;
+  font-size: 12px;
+  text-align: center;
+}
+.callback-form__link {
+  color: #E79C2B;
+}
+.callback-form__name-error {
+  display: none;
+}
+.callback-form__name-error-active {
+  display: block;
+  color: #DD8F1B;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.callback-form__phone-error {
+  display: none;
+}
+.callback-form__phone-error-active {
+  display: block;
+  color: #DD8F1B;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.callback-form__email-error {
+  display: none;
+}
+.callback-form__email-error-active {
+  display: block;
+  color: #DD8F1B;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 992px) {

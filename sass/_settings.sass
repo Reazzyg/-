@@ -46,6 +46,9 @@ h2
     color: $keko
     max-width: 40%
     width: 40%
+  &-deactivated
+    background-color: $input-color
+    border: 1px solid $input-color
 .load-more
   display: flex
   align-items: center
@@ -53,3 +56,16 @@ h2
   width: 100%
 .hidden
   display: none
+.input
+  outline: none
+  border: none
+  width: 100%
+  color: $input-color
+  font-size: 12px
+  margin-bottom: 20px
+  padding: 0 10px 15px 5px
+  border-bottom: 1px solid $input-color
+  &:nth-last-child(1)
+    margin-bottom: 0
+  &:focus .callback-form__button
+    background-color: #fff

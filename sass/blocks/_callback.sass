@@ -1,0 +1,91 @@
+.callback
+  padding: 180px 0 180px 0
+  height: 100vh
+  display: flex
+  align-items: center
+  background-image: url('../img/form-bg.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  position: relative
+  z-index: 1
+  &-overlay
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%)
+    z-index: -2
+  &-circle
+    position: absolute
+    top: 10%
+    right: 0
+    bottom: 0
+    left: -50%
+    transform: translateY(50%)
+    width: 1701px
+    height: 372px
+    border-radius: 1701px
+    opacity: 0.6000000238418579
+    background: #222
+    filter: blur(150px)
+    z-index: -1
+  &-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-text
+    display: flex
+    flex-direction: column
+  &-title
+    color: $white
+  &-subtitle
+    margin-bottom: 30px
+  &-form
+    padding: 60px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    max-width: 600px
+    background-color: $white
+    &__title
+      font-size: 33px
+      font-family: $title
+      color: $text-color
+      text-align: center
+    &__button
+      max-width: 100%
+      width: 100%
+      margin-top: 40px
+    &__policy
+      margin-top: 20px
+      color: $input-color
+      font-size: 12px
+      text-align: center
+    &__link
+      color: $keko
+    &__name-error
+      display: none
+      &-active
+        display: block
+        color: $orange
+        width: 100%
+        font-size: 14px
+        margin-bottom: 5px
+    &__phone-error
+      display: none
+      &-active
+        display: block
+        color: $orange
+        width: 100%
+        font-size: 14px
+        margin-bottom: 5px
+    &__email-error
+      display: none
+      &-active
+        display: block
+        color: $orange
+        width: 100%
+        font-size: 14px
+        margin-bottom: 5px
