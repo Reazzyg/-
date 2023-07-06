@@ -197,10 +197,39 @@ button.addEventListener('click', function(event) {
     emailError.textContent = 'Введите верную почту';
   }
 });
-//====================================================
+//====================3d================================
+// Получите ссылку на контейнер
+// Получите ссылку на контейнер
+var container = document.getElementById('canvas-container');
 
+// Создайте сцену
+var scene = new THREE.Scene();
 
+// Создайте камеру
+var camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+camera.position.z = 5;
 
+// Создайте рендерер
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(container.offsetWidth, container.offsetHeight);
+container.appendChild(renderer.domElement);
+
+// Загрузите модель
+var loader = new THREE.GLTFLoader();
+loader.load('3d/skull/scene.gltf', function (gltf) {
+  var object = gltf.scene;
+  scene.add(object);
+});
+
+// Определите функцию анимации
+function animate() {
+  requestAnimationFrame(animate);
+  // Ваши изменения и анимации модели
+  renderer.render(scene, camera);
+}
+
+// Запустите анимацию
+animate();
 
   // const showMenu = (toggleId, navId) => {
   //   const toggle = document.getElementById(toggleId),

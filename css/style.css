@@ -797,6 +797,148 @@ h2 {
   margin-bottom: 5px;
 }
 
+.projects {
+  padding: 180px 0 180px 0;
+  background-color: #323030;
+}
+.projects-container {
+  display: flex;
+  flex-direction: column;
+}
+.projects-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.projects-top-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects-title {
+  margin-bottom: 20px;
+  color: #fff;
+}
+.projects-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.projects-card__img {
+  height: 165px;
+  width: 385px;
+  object-fit: cover;
+  margin-bottom: 20%;
+}
+.projects-card-description {
+  display: flex;
+  flex-direction: column;
+}
+.projects-card-description__name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #434242;
+  margin-bottom: 10px;
+}
+.projects-card-description__info {
+  color: #434242;
+  margin-left: 10px;
+}
+.projects-card-description-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects-card-description-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.projects-card__button {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+.projects-modal {
+  padding: 85px 50px 50px 50px;
+  margin-top: 50px;
+  background-color: #fff;
+  color: #434242;
+  width: 100%;
+}
+.projects-modal-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.projects-modal-visual {
+  display: flex;
+  flex-direction: column;
+}
+.projects-modal-text {
+  padding-left: 7%;
+}
+.projects-modal-info__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 33px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.projects-modal-info-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.projects-modal-info-block-wrapper {
+  display: flex;
+  align-items: center;
+}
+.projects-modal-info-block__num {
+  font-size: 20px;
+  color: #434242;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.projects-modal-info-block__text {
+  color: #9E9C9C;
+  font-size: 18px;
+  font-weight: 500;
+}
+.projects-modal__button {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 25px;
+}
+.projects-slider {
+  width: 780px;
+  height: 472px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+.projects-slider img {
+  width: 100%;
+  object-fit: cover;
+}
+.projects-obs {
+  width: 780px;
+  height: 472px;
+  overflow: hidden;
+}
+.projects-obs img {
+  width: 100%;
+  object-fit: cover;
+}
+
 @media screen and (min-width: 992px) {
   .header-menu-list__link:hover {
     color: #DD8F1B;
