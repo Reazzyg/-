@@ -1,0 +1,286 @@
+# FILE:banya.obj
+newmtl GDLM1_SHADOW_MATERIAL
+Ka 0.228885 0.228885 0.228885
+Kd 0.228885 0.228885 0.228885
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl 2._Бревно_горизонтальное
+Ka 0.553412 0.412588 0.202588
+Kd 0.746667 0.556667 0.273333
+Ks 0.0657053 0.0519249 0.045153
+illum 2
+Ns 5
+map_Ka textures\гориз.jpg
+map_Kd textures\гориз.jpg
+map_Ks textures\гориз.jpg
+newmtl 4._срез_бревна_0,5
+Ka 0.448895 0.311532 0.143661
+Kd 0.489095 0.33943 0.156526
+Ks 0.368549 0.368549 0.368549
+illum 2
+Ns 0
+map_Ka textures/tx2h4gUr1hU.jpg
+map_Kd textures/tx2h4gUr1hU.jpg
+map_Ks textures/tx2h4gUr1hU.jpg
+newmtl 3._срез_бревна_1
+Ka 0.448895 0.311532 0.143661
+Kd 0.489095 0.33943 0.156526
+Ks 0.368549 0.368549 0.368549
+illum 2
+Ns 0
+map_Ka textures\8Yaql9kc7K8.jpg
+map_Kd textures\8Yaql9kc7K8.jpg
+map_Ks textures\8Yaql9kc7K8.jpg
+newmtl Кровля_-_Плитка_Битумная_Закругленная
+Ka 0.425765 0.175137 0.123804
+Kd 0.497647 0.204706 0.144706
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka textures\Кровля 02 GS.jpg
+map_Kd textures\Кровля 02 GS.jpg
+map_Ks textures\Кровля 02 GS.jpg
+newmtl Краска_-_Антрацит
+Ka 0.1454 0.1454 0.1454
+Kd 0.1454 0.1454 0.1454
+Ks 0.0913024 0.0913024 0.0913024
+illum 2
+Ns 4.2
+newmtl 6._подшив_вертикальный
+Ka 0.511176 0.468039 0.396863
+Kd 0.697059 0.638235 0.541176
+Ks 0.268941 0.268941 0.268941
+illum 2
+Ns 0
+map_Ka textures\PjTpbRQ5wCc.jpg
+map_Kd textures\PjTpbRQ5wCc.jpg
+map_Ks textures\PjTpbRQ5wCc.jpg
+newmtl Дерево_-_Сосна_Продольная_Горизонтальная
+Ka 0.501882 0.459529 0.389647
+Kd 0.697059 0.638235 0.541176
+Ks 0.343647 0.343647 0.343647
+illum 2
+Ns 0
+map_Ka textures\Сосна Продольная 01-opt GS.jpg
+map_Kd textures\Сосна Продольная 01-opt GS.jpg
+map_Ks textures\Сосна Продольная 01-opt GS.jpg
+newmtl Дерево_-_Дуб_Светлый
+Ka 0.553412 0.412588 0.202588
+Kd 0.746667 0.556667 0.273333
+Ks 0.0657053 0.0519249 0.045153
+illum 2
+Ns 5
+map_Ka textures\Дуб Светлая Основа GS.jpg
+map_Kd textures\Дуб Светлая Основа GS.jpg
+map_Ks textures\Дуб Светлая Основа GS.jpg
+newmtl Краска_-_Белила_Титановые
+Ka 0.8 0.8 0.8
+Kd 0.89 0.89 0.89
+Ks 0.0891005 0.0891005 0.09
+illum 2
+Ns 2.2
+newmtl 1._Бревно_вертикальное
+Ka 0.553412 0.412588 0.202588
+Kd 0.746667 0.556667 0.273333
+Ks 0.0657053 0.0519249 0.045153
+illum 2
+Ns 5
+map_Ka textures\верт.jpg
+map_Kd textures\верт.jpg
+map_Ks textures\верт.jpg
+newmtl Дерево_-_Дуб_Светлый_(копия)_(копия)
+Ka 0.316235 0.316235 0.316235
+Kd 0.426667 0.426667 0.426667
+Ks 0.0657053 0.0519249 0.045153
+illum 2
+Ns 5
+map_Ka textures\старое-дерево_12 — копия.jpg
+map_Kd textures\старое-дерево_12 — копия.jpg
+map_Ks textures\старое-дерево_12 — копия.jpg
+newmtl 8._фундамент_камень
+Ka 0.569533 0.514021 0.448547
+Kd 0.435525 0.393075 0.343007
+Ks 0 0 0
+illum 2
+Ns 0
+map_Ka textures\0937b9b1d53eec4c3ecc0e27557bcbc2.jpg
+map_Kd textures\0937b9b1d53eec4c3ecc0e27557bcbc2.jpg
+map_Ks textures\0937b9b1d53eec4c3ecc0e27557bcbc2.jpg
+newmtl Бетон_-_04
+Ka 0.322824 0.324745 0.303608
+Kd 0.474353 0.477176 0.446118
+Ks 0.356948 0.3491 0.306226
+illum 2
+Ns 0
+map_Ka textures\Бетон Уложенный 01 GS.jpg
+map_Kd textures\Бетон Уложенный 01 GS.jpg
+map_Ks textures\Бетон Уложенный 01 GS.jpg
+newmtl GDLM15_PEN_MATERIAL0
+Ka 0.844892 0.844892 0.844892
+Kd 0.844892 0.844892 0.844892
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl PEN_MATERIAL1
+Ka 0.15259 0.15259 0.15259
+Kd 0.15259 0.15259 0.15259
+Ks 0 0 0
+illum 2
+Ns 0
+newmtl Дерево_-_Махагони_Вертикальное
+Ka 0.448895 0.311532 0.143661
+Kd 0.489095 0.33943 0.156526
+Ks 0.368549 0.368549 0.368549
+illum 2
+Ns 0
+map_Ka textures\Махагони В GS.jpg
+map_Kd textures\Махагони В GS.jpg
+map_Ks textures\Махагони В GS.jpg
+newmtl Стекло_-_Прозрачное_Быстрое
+Ka 0.64 0.658667 0.648
+Kd 0.564706 0.581176 0.571765
+Ks 1 1 1
+illum 2
+d 0.31
+Ns 79.52
+newmtl Металл_-_Сталь_Нержавеющая
+Ka 0.80098 0.786078 0.808431
+Kd 0.286667 0.281333 0.289333
+Ks 0.923922 0.923922 0.923922
+illum 2
+Ns 18
+newmtl Стекло_-_Сатин
+Ka 0.567647 0.564706 0.579412
+Kd 0.21949 0.218353 0.224039
+Ks 0.4 0.4 0.4
+illum 2
+d 0.6
+Ns 7
+map_Ka textures\Сатин Альфа 03 GS.jpg
+map_Kd textures\Сатин Альфа 03 GS.jpg
+map_Ks textures\Сатин Альфа 03 GS.jpg
+newmtl Воздух
+Ka 0.8 0.8 0.8
+Kd 0.89 0.89 0.89
+Ks 0.0891005 0.0891005 0.09
+illum 2
+d 0
+Ns 2.2
+newmtl Краска_-_Светло-Серая
+Ka 0.467765 0.467765 0.467765
+Kd 0.540235 0.540235 0.540235
+Ks 0.366667 0.366667 0.366667
+illum 2
+Ns 11
+newmtl Металл_-_Цинк
+Ka 0.365257 0.369906 0.373607
+Kd 0.418385 0.423711 0.42795
+Ks 0.418353 0.418353 0.418353
+illum 2
+Ns 11
+map_Ka textures\Металл Цинк 01a GS.jpg
+map_Kd textures\Металл Цинк 01a GS.jpg
+map_Ks textures\Металл Цинк 01a GS.jpg
+newmtl Металл_-_Железо
+Ka 0.243016 0.252075 0.271919
+Kd 0.198562 0.205964 0.222178
+Ks 0.24902 0.24902 0.24902
+illum 2
+Ns 0
+map_Ka textures\Свинец GS.jpg
+map_Kd textures\Свинец GS.jpg
+map_Ks textures\Свинец GS.jpg
+newmtl Краска_-_Глянцевая_Белая
+Ka 0.86 0.86 0.86
+Kd 0.81 0.81 0.81
+Ks 0.0892941 0.0892941 0.09
+illum 2
+Ns 0
+newmtl Металл_-_Бронза
+Ka 0.36 0.324 0.0762353
+Kd 0.266667 0.24 0.0564706
+Ks 0.579313 0.334617 0.242166
+illum 2
+Ns 9.8
+newmtl Бетон_-_02
+Ka 0.434824 0.437412 0.408941
+Kd 0.467765 0.470549 0.439922
+Ks 0.129799 0.126945 0.111355
+illum 2
+Ns 0
+map_Ka textures\Бетон 4X4 Альфа GS.jpg
+map_Kd textures\Бетон 4X4 Альфа GS.jpg
+map_Ks textures\Бетон 4X4 Альфа GS.jpg
+newmtl Кирпич_-_Ложковая_Кладка
+Ka 0.459804 0.236471 0.197059
+Kd 0.42549 0.218824 0.182353
+Ks 0.152 0.152 0.152
+illum 2
+Ns 0
+map_Ka textures\Кирпич Ложковый Альфа GS.jpg
+map_Kd textures\Кирпич Ложковый Альфа GS.jpg
+map_Ks textures\Кирпич Ложковый Альфа GS.jpg
+newmtl GDLM29_Mediterran_g_zenonix
+Ka 0.121647 0.100941 0.0931765
+Kd 0.165882 0.137647 0.127059
+Ks 0.0300504 0.0300504 0.0300504
+illum 2
+Ns 5
+map_Ka textures\Mediterran_zenonix.jpg
+map_Kd textures\Mediterran_zenonix.jpg
+map_Ks textures\Mediterran_zenonix.jpg
+newmtl Краска_-_Бледный_Нефрит
+Ka 0.421569 0.573333 0.526118
+Kd 0.397059 0.54 0.495529
+Ks 0.0891005 0.0891005 0.09
+illum 2
+Ns 2.2
+newmtl GDLM31_zen_zenonix_t
+Ka 0.211198 0.178195 0.158396
+Kd 0.287997 0.242994 0.215995
+Ks 0.0300504 0.0300504 0.0300504
+illum 2
+Ns 5
+map_Ka textures\Mediterran_zen_onix_t.jpg
+map_Kd textures\Mediterran_zen_onix_t.jpg
+map_Ks textures\Mediterran_zen_onix_t.jpg
+newmtl Краска_-_Темно-Серая
+Ka 0.253373 0.253373 0.253373
+Kd 0.292627 0.292627 0.292627
+Ks 0.25098 0.25098 0.25098
+illum 2
+Ns 11
+newmtl 9.кровля
+Ka 0.163575 0.163575 0.163575
+Kd 0.15994 0.15994 0.15994
+Ks 0 0 0
+illum 2
+Ns 0.32
+map_Ka textures\0QO8KXNoEAg.jpg
+map_Kd textures\0QO8KXNoEAg.jpg
+map_Ks textures\0QO8KXNoEAg.jpg
+newmtl Кирпич_-_Старый_Натуральный
+Ka 0.394039 0.228392 0.180706
+Kd 0.394039 0.228392 0.180706
+Ks 0.370588 0.245098 0.170588
+illum 2
+Ns 0
+map_Ka textures\Кирпич Старый 1 GS.jpg
+map_Kd textures\Кирпич Старый 1 GS.jpg
+map_Ks textures\Кирпич Старый 1 GS.jpg
+newmtl Дерево_-_Сосна_Продольная_Вертикальная
+Ka 0.511176 0.468039 0.396863
+Kd 0.697059 0.638235 0.541176
+Ks 0.268941 0.268941 0.268941
+illum 2
+Ns 0
+map_Ka textures\Сосна Продольная Вертикальная-opt 01 GS.jpg
+map_Kd textures\Сосна Продольная Вертикальная-opt 01 GS.jpg
+map_Ks textures\Сосна Продольная Вертикальная-opt 01 GS.jpg
+newmtl GDLM36_Opaque
+Ka 0 0 0
+Kd 0 0 0
+Ks 0 0 0
+illum 2
+Ns 0

@@ -12,7 +12,6 @@
     &-wrapper
       display: flex
       flex-direction: column
-      align-items: center
   &-title
     margin-bottom: 20px
     color: $white
@@ -20,14 +19,28 @@
     display: flex
     justify-content: space-between
     align-items: center
+    padding-bottom: 40px
+  &-type
+    display: flex
+    flex-direction: column
+    width: 100%
+  &-row
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 20px
   &-card
     padding: 40px
     display: flex
     flex-direction: column
     background-color: $white
+    margin-bottom: 20px
+    min-width: 30%
+    max-width: 33%
     &__img
       height: 165px
-      width: 385px
+      width: 100%
       object-fit: cover
       margin-bottom: 20%
     &-description
@@ -46,6 +59,7 @@
         display: flex
         justify-content: space-between
         align-items: center
+        flex-wrap: wrap
       &-wrapper
         display: flex
         justify-content: space-between
@@ -55,20 +69,49 @@
       width: 100%
       max-width: 100%
       text-align: center
+
   &-modal
+    // display: none
+    opacity: 0
+    position: fixed
+    top: 50%
+    right: 50%
+    transform: translate(50%, -50%)
     padding: 85px 50px 50px 50px
-    margin-top: 50px
     background-color: $white
     color: $text-color
     width: 100%
+    max-width: 95vw
+    max-height: 95vh
+    z-index: -999
+    overflow: auto
+    &::-webkit-scrollbar
+      width: 6px
+      background-color: #D9D9D9
+      height: 0
+    &::-webkit-scrollbar-thumb
+      background-color: #D9D9D9
+      opacity: 0.3
+      border-radius: 7.5px
+      border: 3px solid #D9D9D9
+    &::-webkit-scrollbar-track
+      background-color: $input-color
+      border: 1.5px solid $input-color
+      border-radius: 7.5px
+      border-top-right-radius: 7.5px
+      border-bottom-right-radius: 7.5px
     &-wrapper
       display: flex
       justify-content: space-between
     &-visual
       display: flex
       flex-direction: column
+      width: 55%
     &-text
-      padding-left: 7%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      max-width: 40%
     &-info
       &__title
         font-family: $title
@@ -93,12 +136,49 @@
           color: $input-color
           font-size: 18px
           font-weight: 500
+    &__close
+      position: absolute
+      top: 40px
+      right: 40px
+      cursor: pointer
     &__button
       width: 100%
       max-width: 100%
       margin-top: 25px
+    &__description
+      position: relative
+      & p
+        font-size: 18px
+        font-weight: 500
+        color: $input-color
+        max-height: 260px
+        margin-top: 10%
+        overflow: scroll
+        &::-webkit-scrollbar
+          width: 6px
+          background-color: #D9D9D9
+          height: 0
+        &::-webkit-scrollbar-thumb
+          background-color: #D9D9D9
+          opacity: 0.3
+          border-radius: 7.5px
+          border: 3px solid #D9D9D9
+        &::-webkit-scrollbar-track
+          background-color: $input-color
+          border: 1.5px solid $input-color
+          border-radius: 7.5px
+          border-top-right-radius: 7.5px
+          border-bottom-right-radius: 7.5px
+      &-fade
+        position: absolute
+        right: 5px
+        bottom: 0
+        left: 0
+        height: 90px
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)
+        transform: rotate(180deg)
   &-slider
-    width: 780px
+    width: 100%
     height: 472px
     margin-bottom: 60px
     overflow: hidden
@@ -106,6 +186,7 @@
       width: 100%
       object-fit: cover
   &-obs
+    display: none
     width: 780px
     height: 472px
     overflow: hidden

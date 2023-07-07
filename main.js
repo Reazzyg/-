@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+
+//==============Menu================================
 document.querySelector('.header-burger').addEventListener('click', function() {
 document.querySelector('.header-menu-mobile').classList.add('header-menu-mobile--active');
 });
@@ -19,7 +21,8 @@ document.querySelector('.header-menu-mobile--active').classList.remove('header-m
   });
 
 // ====================Фильтр в разделе Наши работы===========================
-  const filterItems = document.querySelectorAll('.filter__item');
+
+const filterItems = document.querySelectorAll('.filter__item');
 let activeFilter = 'doma';
 
 function applyFilter(filter) {
@@ -96,7 +99,7 @@ if (loadMoreBtn) {
 
 
  // Получаем все элементы с атрибутом data-target
-  const tabs = document.querySelectorAll('[data-target]');
+  const tabs = document.querySelectorAll('.technology-tabs__item[data-target]');
   
   // Добавляем обработчик клика на каждый элемент
   tabs.forEach(tab => {
@@ -197,179 +200,135 @@ button.addEventListener('click', function(event) {
     emailError.textContent = 'Введите верную почту';
   }
 });
-//====================3d================================
-// Получите ссылку на контейнер
-// Получите ссылку на контейнер
-var container = document.getElementById('canvas-container');
 
-// Создайте сцену
-var scene = new THREE.Scene();
+//=======================Modal open=========================
 
-// Создайте камеру
-var camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-camera.position.z = 5;
-
-// Создайте рендерер
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize(container.offsetWidth, container.offsetHeight);
-container.appendChild(renderer.domElement);
-
-// Загрузите модель
-var loader = new THREE.GLTFLoader();
-loader.load('3d/skull/scene.gltf', function (gltf) {
-  var object = gltf.scene;
-  scene.add(object);
+// Получите все кнопки с классом "button projects-card__button"
+const buttons = document.querySelectorAll('.button.projects-card__button');
+const overlay = document.querySelector('.overlay');
+const closeButton = document.querySelector('.projects-modal__close');
+// Переберите все кнопки и добавьте обработчик события "click"
+buttons.forEach((button) => {
+  button.addEventListener('click', handleButtonClick);
 });
 
-// Определите функцию анимации
-function animate() {
-  requestAnimationFrame(animate);
-  // Ваши изменения и анимации модели
-  renderer.render(scene, camera);
+// Обработчик события "click"
+function handleButtonClick(event) {
+  // Получите значение дата атрибута "data-target" у нажатой кнопки
+  const target = event.target.dataset.target;
+
+  // Откройте модальное окно с соответствующим дата атрибутом
+  const modal = document.querySelector(`.projects-modal[data="${target}"]`);
+  if (modal) {
+    modal.style.opacity = '1';
+    modal.style.zIndex = '999';
+    overlay.style.display = 'block';
+
+  }
+}
+// Получите элементы overlay и кнопку закрытия модального окна
+
+
+// Получите все модальные окна
+const modals = document.querySelectorAll('.projects-modal');
+
+// Добавьте обработчики событий "click" на overlay и кнопку закрытия
+overlay.addEventListener('click', handleCloseModal);
+closeButton.addEventListener('click', handleCloseModal);
+
+// Обработчик события "click" для закрытия модального окна
+function handleCloseModal() {
+  // Переберите все модальные окна и скройте их
+  modals.forEach((modal) => {
+    modal.style.opacity = '0';
+    modal.style.zIndex = '-999';
+    overlay.style.display = 'none';
+  });
 }
 
-// Запустите анимацию
-animate();
+// ====================Фильтр в разделе Проекты===========================
 
-  // const showMenu = (toggleId, navId) => {
-  //   const toggle = document.getElementById(toggleId),
-  //     nav = document.getElementById(navId);
-  //   if (toggle && nav) {
-  //     toggle.addEventListener('click', () => {
-  //       nav.classList.toggle('show-menu');
-  //     });
-  //   }
-  // };
-  // showMenu('nav-toggle', 'nav-menu');
+const projectsFilterItems = document.querySelectorAll('.projects-filter__item');
+let projectsActiveFilter = 'doma';
+let cardDisplayCount = 3;
+const breakpoint = 768;
 
-  // const navLink = document.querySelectorAll('.nav__link');
+function applyProjectsFilter(filter) {
+  const projectsTypes = document.querySelectorAll('.projects-type');
 
-  // function linkAction() {
-  //   const navMenu = document.getElementById('nav-menu');
-  //   navMenu.classList.remove('show-menu');
-  // }
-  // navLink.forEach((n) => n.addEventListener('click', linkAction));
+  projectsTypes.forEach(type => {
+    if (type.getAttribute('data') === filter) {
+      type.style.display = 'flex';
+    } else {
+      type.style.display = 'none';
+    }
+  });
 
-  // const sections = document.querySelectorAll('section[id]');
+  const projectsCards = document.querySelectorAll('.projects-card');
 
-  // function scrollActive() {
-  //   const scrollY = window.pageYOffset;
+  projectsCards.forEach((card, index) => {
+    if (index < cardDisplayCount && card.closest('.projects-type').getAttribute('data') === filter) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
 
-  //   sections.forEach((current) => {
-  //     const sectionHeight = current.offsetHeight;
-  //     const sectionTop = current.offsetTop;
-  //     sectionId = current.getAttribute('id');
-  //     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-  //       document
-  //         .querySelector('.nav__menu a[href*=' + sectionId + ']')
-  //         .classList.add('active-link');
-  //     } else {
-  //       document
-  //         .querySelector('.nav__menu a[href*=' + sectionId + ']')
-  //         .classList.remove('active-link');
-  //     }
-  //   });
-  // }
-  // window.addEventListener('scroll', scrollActive);
+  projectsActiveFilter = filter;
 
-  // function scrollHeader() {
-  //   const header = document.getElementById('header');
-  //   if (this.scrollY >= 200) header.classList.add('scroll-header');
-  //   else header.classList.remove('scroll-header');
-  // }
-  // window.addEventListener('scroll', scrollHeader);
+  const loadMoreBtn = document.querySelector('.projects-load-more');
+  loadMoreBtn.style.display = 'flex';
+}
 
-  // $('.scrolltop').click(function () {
-  //   $('body,html').animate({ scrollTop: 0 }, 400);
-  // });
+function showFirstProjectsCards() {
+  const projectsTypes = document.querySelectorAll('.projects-type');
 
-  // function scrollTop() {
-  //   const scrollTop = document.getElementById('scroll-top');
-  //   if (this.scrollY >= 560) scrollTop.classList.add('show-scroll');
-  //   else scrollTop.classList.remove('show-scroll');
-  // }
-  // window.addEventListener('scroll', scrollTop);
+  projectsTypes.forEach(type => {
+    const filter = type.getAttribute('data');
+    const projectsCards = type.querySelectorAll('.projects-card');
 
-  // gsap.from('.home__img', { opacity: 0, duration: 2, delay: 0.5, x: 60 });
-  // gsap.from('.home__data', { opacity: 0, duration: 2, delay: 0.8, y: 25 });
-  // gsap.from('.home__greeting,.home__profession, .home__button', {
-  //   opacity: 0,
-  //   duration: 2,
-  //   delay: 1,
-  //   y: 25,
-  //   ease: 'expo.out',
-  //   stagger: 0.2,
-  // });
-  // gsap.from('.nav__logo,.nav__toggle', {
-  //   opacity: 0,
-  //   duration: 2,
-  //   delay: 1.5,
-  //   y: 25,
-  //   ease: 'expo.out',
-  //   stagger: 0.2,
-  // });
-  // gsap.from('.nav__item', {
-  //   opacity: 0,
-  //   duration: 2,
-  //   delay: 1.8,
-  //   y: 25,
-  //   ease: 'expo.out',
-  //   stagger: 0.2,
-  // });
-  // gsap.from('.home__social-icon', {
-  //   opacity: 0,
-  //   duration: 2,
-  //   delay: 2.3,
-  //   y: 25,
-  //   ease: 'expo.out',
-  //   stagger: 0.2,
-  // });
+    projectsCards.forEach((card, index) => {
+      if (index < cardDisplayCount && filter === projectsActiveFilter) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+}
 
-  // var resize = $('#grade-img');
-  // resize.on('click', function () {
-  //   resize.toggleClass('qualification__img-resize');
-  // });
-  // var resizeOverlay = $('.qualification__overlay');
-  // resize.on('click', function () {
-  //   resizeOverlay.toggleClass('qualification__overlay-visible');
-  // });
-  // var resizeOverlay = $('.qualification__overlay');
-  // resizeOverlay.on('click', function () {
-  //   resize.removeClass('qualification__img-resize');
-  //   resizeOverlay.removeClass('qualification__overlay-visible');
-  // });
-  // $(document).on('keydown', function (e) {
-  //   if (e.keyCode == 27) {
-  //     var resize = $('.qualification__img');
-  //     var resizeOverlay = $('.qualification__overlay');
-  //     resize.removeClass('qualification__img-resize');
-  //     resizeOverlay.removeClass('qualification__overlay-visible');
-  //   }
-  // });
-  // var modalButton = $('.button-modal');
-  // var modalWindow = $('.modal');
-  // var modalOverlay = $('.portfolio__overlay');
-  // var closeButton = $('.modal__close');
+function updateCardDisplayCount() {
+  cardDisplayCount = window.innerWidth < breakpoint ? 2 : 3;
+  showFirstProjectsCards();
+}
 
-  // modalButton.on('click', function (event) {
-  //   var activeContent = $(this).attr('data-target');
-  //   $(activeContent).addClass('modal-visible');
-  //   modalOverlay.addClass('portfolio__overlay-visible');
-  // });
+window.addEventListener('resize', updateCardDisplayCount);
+updateCardDisplayCount(); // Показать соответствующее количество карточек при загрузке страницы
 
-  // closeButton.on('click', function () {
-  //   modalWindow.removeClass('modal-visible');
-  //   modalOverlay.removeClass('portfolio__overlay-visible');
-  // });
+projectsFilterItems.forEach(item => item.addEventListener('click', function (event) {
+  const target = event.target.getAttribute('data-target');
+  projectsFilterItems.forEach(item => item.classList.remove('projects-filter__item-active'));
+  event.target.classList.add('projects-filter__item-active');
+  applyProjectsFilter(target);
 
-  // modalOverlay.on('click', function () {
-  //   modalWindow.removeClass('modal-visible');
-  //   modalOverlay.removeClass('portfolio__overlay-visible');
-  // });
-  // $(document).on('keydown', function (e) {
-  //   if (e.keyCode == 27) {
-  //     modalWindow.removeClass('modal-visible');
-  //     modalOverlay.removeClass('portfolio__overlay-visible');
-  //   }
-  // });
+  showFirstProjectsCards(); // Показать соответствующее количество карточек после смены вкладки фильтра
+}));
+
+applyProjectsFilter(projectsActiveFilter);
+
+const projectsLoadMoreBtn = document.querySelector('.projects-load-more');
+if (projectsLoadMoreBtn) {
+  projectsLoadMoreBtn.addEventListener('click', function () {
+    const hiddenCards = document.querySelectorAll('.projects-card:not([style="display: flex;"])');
+    const cardsToLoad = Array.from(hiddenCards).filter(card => card.closest('.projects-type').getAttribute('data') === projectsActiveFilter).slice(0, cardDisplayCount);
+
+    cardsToLoad.forEach(card => {
+      card.style.display = 'flex';
+    });
+
+    const isLastCard = hiddenCards.length <= cardDisplayCount || cardsToLoad.length === 0;
+    this.style.display = isLastCard ? 'none' : 'flex';
+  });
+}
+//=======================
 });

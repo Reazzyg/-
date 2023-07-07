@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    .projects {
+      padding: 180px 0 180px 0;
+      background-color: #323030;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .projects-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .projects-top-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .projects-title {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .projects-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+
+    .projects-type {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .projects-top-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .projects-title {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .projects-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .projects-type {
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+    }
+
+    .projects-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .projects-card {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+    }
+
+    .projects-card__img {
+      height: 165px;
+      width: 385px;
+      object-fit: cover;
+      margin-bottom: 20%;
+    }
+
+    .projects-card-description {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .projects-card-description__name {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #434242;
+      margin-bottom: 10px;
+    }
+
+    .projects-card-description__info {
+      color: #434242;
+      margin-left: 10px;
+    }
+
+    .projects-card-description-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .projects-card-description-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .projects-card__button {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .projects-load-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .button {
+      max-width: fit-content;
+      padding: 13px 30px;
+      border-radius: 15px;
+      font-size: 18px;
+      background: #E79C2B;
+      color: #fff;
+      border: 1px solid #E79C2B;
+      outline: none;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .button-outline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: #E79C2B;
+      max-width: 40%;
+      width: 40%;
+    }
+
+    .projects-filter__item {
+      height: fit-content;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .projects-filter__item-active {
+      color: #E79C2B;
+      position: relative;
+    }
+
+    .projects-filter__item-active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 2px;
+      background-color: #E79C2B;
+    }
+
+    .filter {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  </style>
+  <div class="projects">
+    <div class="container projects-container">
+      <div class="projects-top">
+        <div class="portfolio-top-wrapper">
+          <h2 class="projects-title">Проекты</h2>
+          <p class="project subtitle">Мы располагаем большой базой проектов, выполненных штатными дизайнерами</p>
+        </div>
+        <!-- /.portfolio-top-wrapper -->
+        <div class="filter projects-filter">
+          <p data-target="doma" class="projects-filter__item projects-filter__item-active">дома</p>
+          <p data-target="bani" class="projects-filter__item">бани</p>
+          <p data-target="besedki" class="projects-filter__item">беседки</p>
+          <p data-target="turbazi" class="projects-filter__item">турбазы</p>
+        </div>
+        <!-- ./filiter -->
+      </div>
+      <!-- /.projects-top -->
+
+      <div class="projects-wrapper">
+        <div data="doma" class="projects-type">
+          <div class="projects-row">
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+          </div>
+          <!-- /.projects-row -->
+        </div>
+        <!-- /.projects-type -->
+        <div data="bani" class="projects-type">
+          <div class="projects-row">
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+          </div>
+          <!-- /.projects-row -->
+        </div>
+        <!-- /.projects-type -->
+        <div data="besedki" class="projects-type">
+          <div class="projects-row">
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+            <div class="projects-card">
+              <img src="img/orenburg/front.jpg" alt="" class="projects-card__img" />
+              <div class="projects-card-description">
+                <p class="projects-card-description__name">Дом оренбург</p>
+                <div class="projects-card-description-bottom">
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/meters-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">30 м2</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+
+                  <div class="projects-card-description-wrapper">
+                    <img src="img/money-black.svg" alt="" class="projects-card-description__img" />
+                    <span class="projects-card-description__info">от 499 тыс. рублей</span>
+                  </div>
+                  <!-- /.projects-card-description-wrapper -->
+                </div>
+                <!-- /.projects-card-description-bottom -->
+                <div data-target="orenburg" class="button button projects-card__button">Подробнее</div>
+              </div>
+              <!-- /.projects-card-description -->
+            </div>
+            <!-- /.projects-card -->
+
+          </div>
+          <!-- /.projects-row -->
+        </div>
+        <!-- /.projects-type -->
+      </div>
+      <!-- ./projects-wrapepr -->
+
+      <div class="projects-load-more">
+        <button class="button button-outline">Больше проектов<img src="img/reboot.svg" button__img"></button>
+      </div>
+      <!-- /.load-more -->
+    </div>
+    <!-- /.container projects-container -->
+  </div>
+  <!-- /.projects -->
+  <!-- /.load-more -->
+  <script>
+    const projectsFilterItems = document.querySelectorAll('.projects-filter__item');
+    let projectsActiveFilter = 'doma';
+
+    function applyProjectsFilter(filter) {
+      const projectsTypes = document.querySelectorAll('.projects-type');
+
+      projectsTypes.forEach(type => {
+        if (type.getAttribute('data') === filter) {
+          type.style.display = 'flex';
+        } else {
+          type.style.display = 'none';
+        }
+      });
+
+      const projectsCards = document.querySelectorAll('.projects-card');
+
+      projectsCards.forEach((card, index) => {
+        if (index < 3 && card.closest('.projects-type').getAttribute('data') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      projectsActiveFilter = filter;
+      const
+        loadMoreBtn = document.querySelector('.projects-load-more');
+      loadMoreBtn.style.display = 'flex';
+    }
+
+    function
+    showFirstProjectsCards() {
+      const projectsTypes = document.querySelectorAll('.projects-type');
+      projectsTypes.forEach(type => {
+        const filter = type.getAttribute('data');
+        const projectsCards = type.querySelectorAll('.projects-card');
+
+        projectsCards.forEach((card, index) => {
+          if (index < 3 && filter === projectsActiveFilter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    }
+    showFirstProjectsCards(); // Показать первые 3 карточки при загрузке страницы
+    projectsFilterItems.forEach(item => item.addEventListener('click', function (event) {
+      const target = event.target.getAttribute('data-target');
+      projectsFilterItems.forEach(item => item.classList.remove('projects-filter__item-active'));
+      event.target.classList.add('projects-filter__item-active');
+      applyProjectsFilter(target);
+
+      showFirstProjectsCards(); // Показать первые 3 карточки после смены вкладки фильтра
+    }));
+
+    applyProjectsFilter(projectsActiveFilter);
+
+    const projectsLoadMoreBtn = document.querySelector('.projects-load-more');
+    if (projectsLoadMoreBtn) {
+      projectsLoadMoreBtn.addEventListener('click', function () {
+        const hiddenCards = document.querySelectorAll('.projects-card:not([style="display: flex;"])');
+        const cardsToLoad = Array.from(hiddenCards).filter(card => card.closest('.projects-type').getAttribute(
+            'data') ===
+          projectsActiveFilter).slice(0, 3);
+
+        cardsToLoad.forEach(card => {
+          card.style.display = 'flex';
+        });
+
+        const isLastCard = hiddenCards.length <= 3 || cardsToLoad.length === 0;
+        this.style.display = isLastCard ? 'none' :
+          'flex';
+      });
+    }
+  </script>
+  <!-- <script>
+    // JavaScript-код здесь
+    var loadMoreButton = document.querySelector('.projects-load-more');
+    var projectsRow = document.querySelector('.projects-row');
+    var cardsToShow = 3; // Количество карточек, которые нужно показать при каждом нажатии на кнопку
+
+    var visibleCardCount = 0; // Счетчик видимых карточек
+    var hiddenCards = []; // Массив скрытых карточек
+
+    // Перебираем все карточки и определяем видимые и скрытые
+    Array.from(projectsRow.children).forEach(function (card) {
+      if (visibleCardCount < cardsToShow) {
+        card.style.display = 'flex';
+        visibleCardCount++;
+      } else {
+        card.style.display = 'none';
+        hiddenCards.push(card);
+      }
+    });
+
+    loadMoreButton.addEventListener('click', function () {
+      // Показываем следующие cardsToShow скрытых карточек
+      var nextCardsToShow = Math.min(hiddenCards.length, cardsToShow);
+
+      for (var i = 0; i < nextCardsToShow; i++) {
+        hiddenCards[i].style.display = 'flex';
+      }
+
+      // Обновляем счетчики
+      visibleCardCount += nextCardsToShow;
+      hiddenCards = hiddenCards.slice(nextCardsToShow);
+
+      // Проверяем, нужно ли скрыть кнопку "Больше проектов"
+      if (hiddenCards.length === 0) {
+        loadMoreButton.style.display = 'none';
+      }
+    });
+  </script> -->
+</body>
+
+</html>

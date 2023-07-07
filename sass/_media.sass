@@ -8,6 +8,10 @@
     background-color: transparent
     color: $keko
     border: 1px solid $keko
+  .button-outline:hover
+    background-color: $keko
+    color: $white
+
   .portfolio-card:hover .portfolio-card-description
     display: flex
 
@@ -73,6 +77,23 @@
   .technology
     &__img
       width: 250%
+  .projects
+    &-card
+      &__img
+        height: auto
+        margin-bottom: 5%
+        object-fit: contain
+      &-description
+        &-wrapper
+          margin-bottom: 10px
+  .footer
+    &-list
+      flex-direction: column
+      &-item
+        margin-bottom: 10px
+        margin-right: 0
+        &:nth-last-child(1)
+          margin-bottom: 0
 @media  ( max-width: 992px  )
   .container
     max-width: 760px
@@ -146,6 +167,43 @@
       width: inherit
       &__item
         font-size: 16px
+  .projects
+    padding: 90px 0 90px 0
+    &-modal
+      &-visual
+        width: 50%
+      &-text
+        max-width: 45%
+      &-info
+        &-block
+          &__num
+            font-size: 18px
+          &__text
+            font-size: 16px
+  .work
+    &-container
+      width: 100%
+      max-width: 100%
+    &-card
+      padding: 70px 40px 70px 0
+      height: 280px
+      &__img
+        height: 280px
+      &-reverse
+        padding: 70px 0px 70px 40px
+      &-list
+        &__item
+          font-size: 16px
+          margin-bottom: 20px
+          &::before
+            font-size: 26px
+            line-height: 100%
+  .swiper
+    height: 300px
+  .adress
+    padding: 60px 0 60px 0
+    &-map
+      height: 400px
 @media  ( max-width: 768px  )
   .container
     max-width: 728px
@@ -199,7 +257,72 @@
         &::before
           line-height: 25px
           font-size: 26px
+  .callback
+    padding: 60px 0 60px 0
+    &-container
+      flex-direction: column
+    &-form
+      &__title
+        font-size: 18px
+  .projects
+    &-top
+      flex-wrap: wrap
+      &-wrapper
+        margin-bottom: 20px
+    &-filter
+      &__item
+        font-size: 16px
+    &-card
+      padding: 30px
+      min-width: 30%
+      max-width: 48%
+      &__img
+        margin-bottom: 5%
+      &-description
+        &-wrapper
+          margin-bottom: 10px
+        &__name
+          font-size: 16px
+    &-modal
+      &-wrapper
+        flex-direction: column
+      &-visual
+        width: 100%
+      &-text
+        max-width: 100%
 
+      &-info
+        &-block
+          &__num
+            font-size: 16px
+          &__text
+            font-size: 14px
+      &__description
+        & p
+          font-size: 16px
+    &-slider
+      height: auto
+  .adress
+    &-wrapper
+      flex-direction: column
+    &-info
+      &__title
+        font-size: 20px
+      &__text
+        font-size: 16px
+      &__link
+        font-size: 16px
+    &-map
+      width: 100%
+      margin-top: 30px
+  .footer
+    &-list
+      display: none
+    &-container
+      flex-wrap: wrap
+      flex-direction: column-reverse
+    &-block
+      margin-bottom: 20px
 @media  ( max-width: 576px  )
   .container
     max-width: 92%
@@ -331,3 +454,49 @@
       width: 100%
       max-height: 350px
       overflow: hidden
+  .projects
+    padding: 60px 0 60px 0
+    &-card
+      padding: 10px
+      min-width: 30%
+      max-width: 48%
+      &-description
+        &-wrapper
+          display: none
+        &__name
+          font-size: 12px
+    &-filter
+      &__item
+        font-size: 12px
+    &-modal
+      &__description
+        & p
+          font-size: 14px
+  .work
+    padding: 60px 0 60px 0
+    &-container
+      width: 100%
+      max-width: 100%
+    &-card
+      padding: 0
+      flex-direction: column-reverse
+      background-color: transparent
+      overflow: inherit
+      height: auto
+      margin-bottom: 30px
+      &__img
+        width: unset
+        margin-inline-end: auto
+        max-width: 90%
+      &-reverse
+        & img
+          margin-inline-end: unset
+          margin-inline-start: auto
+          transform: translate(0)
+      &-list
+        padding-left: 20px
+        padding-right: 20px
+  .swiper
+    height: 200px
+  .work-swiper-button-next
+    right: 50px
