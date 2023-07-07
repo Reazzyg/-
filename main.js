@@ -330,5 +330,42 @@ if (projectsLoadMoreBtn) {
     this.style.display = isLastCard ? 'none' : 'flex';
   });
 }
-//=======================
+//=======================modal==============
+
+let modalButtons = document.querySelectorAll('.toggle-modal')
+let modal = document.querySelector('.modal-form')
+let modalOvelay = document.querySelector('.modal-overlay')
+let modalCloseButton =document.querySelector('.modal-form__close')
+modalButtons.forEach(button => button.addEventListener('click', function(){
+  if(modal.style.display = modalOvelay.style.display = 'none'){
+    modal.style.display = 'block'
+    modalOvelay.style.display = 'block'
+  }
+  else{
+    modal.style.display = 'none'
+    modalOvelay.style.display = 'none'
+  }
+  modalCloseButton.addEventListener('click', function(){
+    if(modal.style.display = modalOvelay.style.display = 'block'){
+    modal.style.display = 'none'
+    modalOvelay.style.display = 'none'
+  }
+  else{
+    modal.style.display = 'none'
+    modalOvelay.style.display = 'none'
+  }
+ 
+  })
+   modalOvelay.addEventListener('click', function(){
+    if(modal.style.display = modalOvelay.style.display = 'block'){
+    modal.style.display = 'none'
+    modalOvelay.style.display = 'none'
+  }
+  else{
+    modal.style.display = 'none'
+    modalOvelay.style.display = 'none'
+  }
+ 
+  })
+}) )
 });

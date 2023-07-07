@@ -86,34 +86,107 @@ h2
   background-color: rgba(0,0,0,.6)
   z-index: 998
   cursor: pointer
-
+.modal-overlay
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(0,0,0,.6)
+  z-index: 1000
+  cursor: pointer
 .swiper
-  width: 100%
-  height: 470px
-  &-overlay
-    position: absolute
-    top: 0
-    right: 0
-    bottom: 0
-    width: 30%
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(0, 0, 0, 0.70) 100%)
-    z-index: 99
-  &-slide
-    text-align: center
-    font-size: 18px
-    background: #fff
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 80%
-    & img
-      display: block
-      width: 100%
-      height: 100%
-      object-fit: cover
+  &-projects
+    width: 100%
+    height: 350px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 50px
+    &-slide
+      text-align: center
+      font-size: 18px
+      background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      background-size: cover
+      background-position: center
+      & img
 
-    &:nth-child(2n)
-      width: 60%
-
-    &:nth-child(3n)
-      width: 40%
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &-bottom
+      height: 40%
+      box-sizing: border-box
+      padding: 10px 0
+      &-overlay
+        position: absolute
+        right: 0
+        top: 0
+        left: 0
+        bottom: 0
+        background-color: #fff
+        opacity: .5
+        z-index: 2
+      & .swiper-slide-thumb-active
+        opacity: 1
+      &-slide
+        background-size: cover
+        background-position: center
+        & img
+          display: block
+          width: 100%
+          height: auto
+          object-fit: cover
+    &-button
+      &-next
+        position: absolute
+        right: 0
+        bottom: -10px
+        z-index: 1
+        cursor: pointer
+      &-prev
+        position: absolute
+        left: 0
+        bottom: -10px
+        z-index: 1
+        cursor: pointer
+  &-furn
+    width: 100%
+    height: 470px
+    &-slide
+      text-align: center
+      font-size: 18px
+      background: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 80%
+      &__img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &:nth-child(2n)
+        width: 60%
+      &:nth-child(3n)
+        width: 40%
+.modal
+  &-form
+    display: none
+    padding: 60px
+    position: fixed
+    right: 50%
+    top: 50%
+    transform: translate(50%, -50%)
+    max-width: 30vw
+    background-color: $white
+    z-index: 1001
+    &__close
+      position: absolute
+      top: 20px
+      right: 20px
+      cursor: pointer

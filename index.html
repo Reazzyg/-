@@ -839,7 +839,7 @@
         </div>
         <!-- /.children-top -->
         <div class="children-wrapper">
-          <img src="/img/kelo-logo.png" alt="" class="children__img" />
+          <img src="img/kelo-logo.png" alt="" class="children__img" />
           <ul class="children-list">
             <li class="children-list__item">
               Низкий процент усадки
@@ -1197,7 +1197,60 @@
           <div class="projects-modal-wrapper">
             <div class="projects-modal-visual">
               <div class="projects-slider">
-                <img src="img/1.jpg" alt="" />
+
+                <div class="swiper swiper-projects mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-projects-slide swiper-projects-slide">
+                      <img src="img/orenburg/front.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-slide">
+                      <img src="img/orenburg/1.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-slide">
+                      <img src="img/orenburg/3.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-slide">
+                      <img src="img/orenburg/4.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-slide">
+                      <img src="img/orenburg/1-plan.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-slide">
+                      <img src="img/orenburg/2-plan.jpg" />
+                    </div>
+                  </div>
+                  <div class="swiper-projects-button-next">
+                    <img src="img/arrow-foreward.svg" alt="">
+                  </div>
+                  <div class="swiper-projects-button-prev">
+                    <img src="img/arrow-back.svg" alt="">
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper swiper-projects-bottom">
+                  <div class="swiper-projects-bottom-overlay"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/front.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/1.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/3.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/4.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/1-plan.jpg" />
+                    </div>
+                    <div class="swiper-slide swiper-projects-bottom-slide">
+                      <img src="img/orenburg/2-plan.jpg" />
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
               <!-- /.projects-slider -->
               <div class="projects-obs">
@@ -1254,7 +1307,7 @@
                   <p class="projects-modal-info-block__text">гарантия</p>
                 </div>
                 <!-- ./projects-modal-info-block -->
-                <button class="button button button-outline projects-modal__button">Хочу такой же</button>
+                <button class="button button button-outline projects-modal__button toggle-modal">Хочу такой же</button>
               </div>
               <!-- /.projects-modal-info -->
               <div class="projects-modal__description">
@@ -1357,39 +1410,37 @@
           свой дом уникальной и неповторимой мебелью нашего производства</p>
 
         <!-- Slider main container -->
-        <div class="swiper">
+        <div class="swiper swiper-furn">
           <!-- <div class="swiper-overlay"></div> -->
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="img/slide1.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide1.jpg" alt="" class="swiper-furn-slide__img">
             </div>
-            <div class="swiper-slide">
-              <img src="img/slide2.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide2.jpg" alt="" class="swiper-furn-slide__img">
             </div>
-            <div class="swiper-slide">
-              <img src="img/slide2.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide2.jpg" alt="" class="swiper-furn-slide__img">
             </div>
-            <div class="swiper-slide">
-              <img src="img/slide2.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide2.jpg" alt="" class="swiper-furn-slide__img">
             </div>
-            <div class="swiper-slide">
-              <img src="img/slide2.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide2.jpg" alt="" class="swiper-furn-slide__img">
             </div>
-            <div class="swiper-slide">
-              <img src="img/slide2.jpg" data-swiper-parallax="-200" alt="" class="swiper-slide__img">
+            <div class="swiper-slide swiper-furn-slide">
+              <img src="img/slide2.jpg" alt="" class="swiper-furn-slide__img">
             </div>
 
           </div>
-
-
           <!-- If we need navigation buttons -->
           <!-- <div class="swiper-button-prev"></div> -->
           <div class="work-swiper-button-next "></div>
-
-
         </div>
+        <!--/. swiper  -->
+
       </div>
     </section>
     <!-- /.furn -->
@@ -1471,7 +1522,25 @@
     <!-- /.container footer-container -->
   </footer>
   <!-- /.footer -->
+  <form action="" class="form modal-form">
+    <img src="img/close.svg" alt="" class="modal-form__close">
+    <h2 class="callback-form__title">Узнайте стоимость проекта</h2>
+    <p class="callback-form__subtitle">В ближайшее время и ответим на все интересующие вас вопросы, оставьте почту или
+      телефон и мы откликнемся удобным для Вас способом</p>
+    <p class="callback-form__name-error"></p>
+    <input type="text" placeholder="* Ваше имя" class="input callback-form__input" />
+    <p class="callback-form__phone-error"></p>
+    <input type="tel" placeholder="* Номер телефона" class="input callback-form__input" />
+    <p class="callback-form__email-error"></p>
+    <input type="email" placeholder="E-mail для получения ответа" class="input callback-form__input" />
+    <button class="button callback-form__button">Позвоните мне</button>
+    <p class="policy callback-form__policy">
+      * Поля обязательны для заполнения. Нажимая кнопку, вы соглашаетесь с
+      <a class="callback-form__link" href="">политикой конфеденциальности</a>
+    </p>
+  </form>
   <div class="overlay"></div>
+  <div class="modal-overlay"></div>
   <script src="
 https://cdn.jsdelivr.net/npm/swiper@10.0.3/swiper-bundle.min.js
 "></script>
