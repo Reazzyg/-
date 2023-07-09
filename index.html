@@ -34,17 +34,18 @@
 <body>
   <header class="header">
     <div class="container header-container">
-      <a href="#"> <img src="img/logo.svg" alt="" class="header-logo" /></a>
+      <a href="#"> <img src="img/logo.svg" alt="ДСК Калевала логотип" class="header-logo" /></a>
       <!-- /.header-logo -->
       <nav class="header-menu">
         <ul class="header-menu-list">
-          <li class="header-menu-list__item"><a href="" class="header-menu-list__link">О нас</a></li>
-          <li class="header-menu-list__item"><a href="" class="header-menu-list__link">Готовые объекты</a></li>
-          <li class="header-menu-list__item"><a href="" class="header-menu-list__link">О кело</a></li>
-          <li class="header-menu-list__item"><a href="" class="header-menu-list__link">Технология</a></li>
-          <li class="header-menu-list__item"><a href="" class="header-menu-list__link">Проекты</a></li>
+          <li class="header-menu-list__item"><a href="#about" class="header-menu-list__link">О нас</a></li>
+          <li class="header-menu-list__item"><a href="#portfolio" class="header-menu-list__link">Готовые объекты</a>
+          </li>
+          <li class="header-menu-list__item"><a href="#children" class="header-menu-list__link">О кело</a></li>
+          <li class="header-menu-list__item"><a href="#technology" class="header-menu-list__link">Технология</a></li>
+          <li class="header-menu-list__item"><a href="#projects" class="header-menu-list__link">Проекты</a></li>
           <li class="header-menu-list__item">
-            <a href="" class="header-menu-list__link header-menu-list__link-active">Контакты</a>
+            <a href="#contacts" class="header-menu-list__link header-menu-list__link-active">Контакты</a>
           </li>
         </ul>
         <div class="header-social">
@@ -57,21 +58,23 @@
       <!-- /.header-menu -->
 
       <button class="header-burger">
-        <span class="header-burger__line"></span>
+        <img src="img/burger.svg" alt="">
       </button>
 
       <nav class="header-menu-mobile">
         <div class="header-menu-mobile__overlay"></div>
         <ul class="header-menu-mobile-list">
-          <li class="header-menu-mobile-list__item"><a href="" class="header-menu-list__link">О нас</a></li>
-          <li class="header-menu-mobile-list__item"><a href="" class="header-menu-list__link">Готовые объекты</a></li>
-          <li class="header-menu-mobile-list__item"><a href="" class="header-menu-list__link">О кело</a></li>
-          <li class="header-menu-mobile-list__item"><a href="" class="header-menu-list__link">Технология</a></li>
-          <li class="header-menu-mobile-list__item"><a href="" class="header-menu-list__link">Проекты</a></li>
-          <li class="header-menu-mobile-list__item"><a href=""
+          <li class="header-menu-mobile-list__item"><a href="#about" class="header-menu-list__link">О нас</a></li>
+          <li class="header-menu-mobile-list__item"><a href="#portfolio" class="header-menu-list__link">Готовые
+              объекты</a></li>
+          <li class="header-menu-mobile-list__item"><a href="#children" class="header-menu-list__link">О кело</a></li>
+          <li class="header-menu-mobile-list__item"><a href="#technology" class="header-menu-list__link">Технология</a>
+          </li>
+          <li class="header-menu-mobile-list__item"><a href="#projects" class="header-menu-list__link">Проекты</a></li>
+          <li class="header-menu-mobile-list__item"><a href="#contanct"
               class="header-menu-list__link header-menu-list__link-active">Контакты</a></li>
           <button class="header-menu-mobile-list-close">
-            <span class="header-menu-mobile-list-close__line"></span>
+            <img src="img/close-white.svg" alt="">
           </button>
           <div class="header-social header-social-mobile">
             <div class="header-social-mobile-wrapper">
@@ -94,7 +97,7 @@
           <h1 class="hero-title">Строим эксклюзивные объекты из <span class="hero-title__accent">сосны Кело</span> на
             своем производстве</h1>
           <p class="hero-subtitle">Выполняем все виды работ—от ландшафта до внутренней отделки</p>
-          <button class="button">Подобрать макет</button>
+          <a href="#projects" class="button">Подобрать макет</a>
           <div class="hero-advantages">
             <div class="hero-advantages-item">
               <img src="img/axe.svg" alt="" class="icon" />
@@ -165,7 +168,7 @@
     </section>
     <!-- /.hero-advantages-mobile -->
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="container about-container">
         <img src="img/about.jpg" alt="" class="about__img" />
         <div class="about-wrapper">
@@ -184,7 +187,7 @@
     </section>
     <!-- /.about -->
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container portfolio-container">
         <div class="portfolio-top">
           <h2 class="portfolio-title">Некоторые наши работы</h2>
@@ -830,7 +833,7 @@
     </section>
     <!-- /.why -->
 
-    <section class="children">
+    <section id="children" class="children">
       <div class="container children-container">
         <div class="children-top">
           <h2 class="children-title">Дом, в котором будут жить ваши правнуки</h2>
@@ -865,7 +868,7 @@
     </section>
     <!-- /.children -->
 
-    <section class="technology">
+    <section id="technology" class="technology">
       <div class="technology-top">
         <h2 class="technology-title technology-title-mobile">Технология</h2>
         <p class="technology-subtitle technology-subtitle-mobile">Мы строим дома по традиционным технологиям: Post &
@@ -948,7 +951,7 @@
           <button class="button callback-form__button">Позвоните мне</button>
           <p class="policy callback-form__policy">
             * Поля обязательны для заполнения. Нажимая кнопку, вы соглашаетесь с
-            <a class="callback-form__link" href="">политикой конфеденциальности</a>
+            <a class="callback-form__link" href="policy.html">политикой конфеденциальности</a>
           </p>
         </form>
       </div>
@@ -956,7 +959,7 @@
     </section>
     <!-- /.callback -->
 
-    <div class="projects">
+    <div id="projects" class="projects">
       <div class="container projects-container">
         <div class="projects-top">
           <div class="projects-top-wrapper">
@@ -1445,7 +1448,7 @@
     </section>
     <!-- /.furn -->
 
-    <section class="adress">
+    <section id="contacts" class="adress">
       <div class="container adress-container">
         <h2 class="title adress-title">Производство расположено в Республике Карелия</h2>
         <div class="adress-wrapper">
@@ -1498,14 +1501,14 @@
       <!-- /.footer-block -->
       <nav class="footer-block footer-nav">
         <ul class="footer-list">
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">О нас</a></li>
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">О кело</a></li>
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">Технология</a></li>
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">Проекты</a></li>
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">Готовые объекты</a></li>
-          <li class="footer-list-item"><a href="" class="footer-list-item__link">Контакты</a></li>
+          <li class="footer-list-item"><a href="#about" class="footer-list-item__link">О нас</a></li>
+          <li class="footer-list-item"><a href="#children" class="footer-list-item__link">О кело</a></li>
+          <li class="footer-list-item"><a href="#technology" class="footer-list-item__link">Технология</a></li>
+          <li class="footer-list-item"><a href="#projects" class="footer-list-item__link">Проекты</a></li>
+          <li class="footer-list-item"><a href="#portfolio" class="footer-list-item__link">Готовые объекты</a></li>
+          <li class="footer-list-item"><a href="#contacts" class="footer-list-item__link">Контакты</a></li>
         </ul>
-        <a href="" class="policy footer__text-light">Политика конфиденциальности</a>
+        <a href="policy.html" class="policy footer__text-light">Политика конфиденциальности</a>
       </nav>
       <!-- /.footer-block -->
 
@@ -1536,7 +1539,7 @@
     <button class="button callback-form__button">Позвоните мне</button>
     <p class="policy callback-form__policy">
       * Поля обязательны для заполнения. Нажимая кнопку, вы соглашаетесь с
-      <a class="callback-form__link" href="">политикой конфеденциальности</a>
+      <a class="callback-form__link" href="policy.html">политикой конфеденциальности</a>
     </p>
   </form>
   <div class="overlay"></div>

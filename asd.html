@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <style>
+    .portfolio {
+      padding: 180px 0 180px 0;
+      background-color: #323030;
+    }
+
+    .portfolio-container {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .portfolio-title {
+      color: #fff;
+      margin-bottom: 0;
+    }
+
+    .portfolio-type {
+      display: grid;
+      grid-template-columns: repeat(12, 8.3%);
+      grid-template-rows: repeat(2, 250px);
+    }
+
+    .portfolio-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .portfolio-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 95%;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-little {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .portfolio-little .portfolio-card {
+      height: 240px;
+      width: 100%;
+    }
+
+    .portfolio-card {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: all 1s;
+    }
+
+    .portfolio-card:nth-child(1) {
+      grid-column: 1/6;
+      grid-row: 1/3;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card:nth-child(4n+1) {
+      grid-column: 1/6;
+      grid-row: 1/3;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card:nth-child(4n+2) {
+      margin: 0 10px 10px 10px;
+      grid-column: 6/8;
+      grid-row: 2/3;
+    }
+
+    .portfolio-card:nth-child(4n+3) {
+      margin: 0 10px 10px 10px;
+      grid-column: 6/8;
+      grid-row: 1/2;
+    }
+
+    .portfolio-card:nth-child(4n) {
+      grid-column: 8/13;
+      grid-row: 1/3;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .portfolio-card-description {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.41) 34.9%, #000 100%);
+      transition: all 1s;
+      z-index: 1;
+      padding: 0 30px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      cursor: pointer;
+      display: none;
+    }
+
+    .portfolio-card-description p,
+    .portfolio-card-description span {
+      color: #fff;
+    }
+
+    .portfolio-card-description p {
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .portfolio-card-description-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container portfolio-container">
+      <div class="portfolio-top">
+        <h2 class="portfolio-title">Некоторые наши работы</h2>
+        <div class="filter">
+          <p data-target="doma" class="portfolio-filter__item portfolio-filter__item-active">дома</p>
+          <p data-target="bani" class="portfolio-filter__item">бани</p>
+          <p data-target="besedki" class="portfolio-filter__item">беседки</p>
+          <p data-target="turbazi" class="fportfolio-filter__item">турбазы</p>
+        </div>
+        <!-- ./filiter -->
+      </div>
+      <!-- /.potrfolio-top -->
+      <div data="doma" class="portfolio-type">
+
+        <div class="portfolio-card">
+          <img src="img/1.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+        <div class="portfolio-card">
+          <img src="img/2.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/3.png" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+        <div class="portfolio-card">
+          <img src="img/1.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+        <div class="portfolio-card">
+          <img src="img/2.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/3.png" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+        <div class="portfolio-card">
+          <img src="img/4.jpg" alt="" class="portfolio-card__img" />
+          <div class="portfolio-card-description">
+            <p class="portfolio-card-description__name">Дом арктика</p>
+            <div class="portfolio-card-description-bottom">
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/meters.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">30 м2</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+
+              <div class="portfolio-card-description-wrapper">
+                <img src="img/money.svg" alt="" class="portfolio-card-description__img" />
+                <span class="portfolio-card-description__info">от 499 тыс. рублей</span>
+              </div>
+              <!-- /.portfolio-card-description-wrapper -->
+            </div>
+            <!-- /.portfolio-card-description-bottom -->
+          </div>
+          <!-- /.portfolio-card-description -->
+        </div>
+        <!-- /.portfolio-card -->
+
+
+      </div>
+      <!-- /.portfolio-type -->
+
+      <div data="bani" class="portfolio-type">
+
+
+
+
+      </div>
+      <!-- /.portfolio-type -->
+      <div data="besedki" class="portfolio-type">
+
+
+
+
+      </div>
+      <!-- /.portfolio-type -->
+      <div class="portfolio-load-more">
+        <button class="button button-outline">Больше проектов<img src="img/reboot.svg" button__img"></button>
+      </div>
+      <!-- /.load-more -->
+    </div>
+    <!-- /.container-portfolio-container -->
+  </section>
+  <!-- /.portfolio -->
+
+  <script>
+    const portfolioFilterItems = document.querySelectorAll('.portfolio-filter__item');
+    const portfolioLoadMoreBtn = document.querySelector('.portfolio-load-more button');
+    let portfolioActiveFilter = 'doma';
+    let portfolioVisibleCardsCount = 4;
+    let portfolioRowCount = 2;
+
+    function portfolioApplyFilter(filter) {
+      const portfolioTypes = document.querySelectorAll('.portfolio-type');
+
+      portfolioTypes.forEach(type => {
+        if (type.getAttribute('data') === filter) {
+          type.style.display = 'grid';
+        } else {
+          type.style.display = 'none';
+        }
+      });
+
+      portfolioActiveFilter = filter;
+    }
+
+    function portfolioShowFirstCards() {
+      const portfolioType = document.querySelector(`[data="${portfolioActiveFilter}"]`);
+      const cards = portfolioType.querySelectorAll('.portfolio-card');
+
+      cards.forEach((card, index) => {
+        if (index < portfolioVisibleCardsCount) {
+          card.style.display = 'block';
+          const row = Math.ceil((index + 1) / 2);
+          card.style.gridRow = `${row}/${row + 1}`;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      const
+        rowCount = Math.ceil(portfolioVisibleCardsCount / 2);
+      portfolioRowCount = rowCount;
+      portfolioType.style.gridTemplateRows = `repeat(${portfolioRowCount}, 250px)`;
+    }
+
+    function portfolioShowNextCards() {
+      const portfolioType = document.querySelector(`[data="${portfolioActiveFilter}" ]`);
+      const
+        cards = portfolioType.querySelectorAll('.portfolio-card');
+      const hiddenCards = Array.from(cards).filter(card =>
+        card.style.display === 'none');
+      const cardsToShow = hiddenCards.slice(0, portfolioVisibleCardsCount);
+
+      cardsToShow.forEach((card, index) => {
+        card.style.display = 'block';
+
+        if (index >= portfolioVisibleCardsCount / 2) {
+          const totalVisibleCards = portfolioVisibleCardsCount + index + 1;
+          const row = Math.ceil(totalVisibleCards / 2);
+          card.style.gridRow = `${row}/${row + 1}`;
+        }
+      });
+
+      if (hiddenCards.length <= portfolioVisibleCardsCount || cardsToShow.length === 0) {
+        portfolioLoadMoreBtn.style.display = 'none';
+      }
+      const rowCount = Math.ceil((portfolioVisibleCardsCount +
+        cardsToShow.length) / 2);
+      portfolioRowCount += 2;
+      portfolioType.style.gridTemplateRows = `repeat(${rowCount},
+      250px)`;
+    }
+    portfolioFilterItems.forEach(item => {
+      item.addEventListener('click', function (event) {
+        const target = event.target.getAttribute('data-target');
+        portfolioFilterItems.forEach(item => item.classList.remove('portfolio-filter__item-active'));
+        event.target.classList.add('portfolio-filter__item-active');
+        portfolioApplyFilter(target);
+        portfolioRowCount = 2;
+        portfolioShowFirstCards();
+      });
+    });
+
+    portfolioLoadMoreBtn.addEventListener('click', function () {
+      portfolioShowNextCards();
+    });
+
+    portfolioApplyFilter(portfolioActiveFilter);
+    portfolioShowFirstCards();
+  </script>
+</body>
+
+</html>
